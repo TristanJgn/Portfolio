@@ -1,7 +1,14 @@
 import "./Navbar.scss";
 
 function Navbar() {
-  return <h1>Navbar</h1>;
+  return (
+    <nav>
+      <div>
+        
+      </div>
+    </nav>
+  
+  )
 }
 
 export default Navbar;
