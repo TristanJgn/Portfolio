@@ -1,3 +1,29 @@
+@use "./variables" as *;
+
+@mixin firstMobile {
+    @media (max-width: $first-mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin secondMobile {
+    @media (max-width: $second-mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+    @media (min-width: $large-screen-breakpoint) {
+        @content;
+    }
+}
+
 @mixin textStyle ($colour, $font-size, $line-height, $font-weight) {
     color: $colour;
     font-size: $font-size;
