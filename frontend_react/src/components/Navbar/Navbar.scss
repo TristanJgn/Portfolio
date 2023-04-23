@@ -1,0 +1,53 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: fixed;
+    z-index: 2;
+
+    &__list {
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 0 1rem;
+        cursor: pointer;
+        @include flexCenter;
+        flex-direction: column;
+
+        &:hover {
+            .navbar__dot {
+                background: $secondary-colour;
+            }
+        }
+    }
+
+    &__dot {
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        border-radius: 50%;
+        margin-bottom: 5px;
+    }
+
+    &__link {
+        @include textStyle($gray-colour, 0.8rem, 1.5rem, 500);
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: left;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $secondary-colour;
+        }
+    }
+}
