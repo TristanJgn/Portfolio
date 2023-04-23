@@ -4,7 +4,7 @@
 .navbar {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
@@ -13,9 +13,17 @@
     position: fixed;
     z-index: 2;
 
+    @include tablet {
+        justify-content: center;
+    }
+
     &__list {
-        display: flex;
-        list-style: none;
+        display: none;
+
+        @include tablet {
+            display: flex;
+            list-style: none;
+        }
     }
 
     &__item {
@@ -44,6 +52,83 @@
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: $secondary-colour;
+        }
+    }
+}
+
+.navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    @include flexCenter;
+    background: $secondary-colour;
+
+    @include tablet {
+        display: none;
+    }
+
+    &__icon {
+        width: 70%;
+        height: 70%;
+        color: $white-colour;
+
+        &--close {
+            width: 35px;
+            height: 35px;
+            color: $secondary-colour;
+            margin: 0.5rem 1rem;
+        }
+    }
+
+    &__container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        background: url("../../assets/images/bgWhite.png");
+        background-color: $white-colour;
+        background-size: cover;
+        background-repeat: repeat;
+
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__item {
+        margin: 1rem;
+    }
+
+    &__link {
+        @include textStyle($gray-colour, 1rem, 1rem, 500);
+        text-decoration: none;
+        text-transform: uppercase;
         transition: all 0.3s ease-in-out;
 
         &:hover {
