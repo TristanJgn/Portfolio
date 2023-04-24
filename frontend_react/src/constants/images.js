@@ -19,8 +19,10 @@ import about03 from "../assets/images/about03.png";
 import about04 from "../assets/images/about04.png";
 
 import circle from '../assets/images/circle.svg';
+import logo from "../assets/images/logo.svg";
 import profile from "../assets/images/profile.png";
 
+// eslint-disable-next-line
 export default {
   axios,
   css,
@@ -40,5 +42,6 @@ export default {
   about03,
   about04,
   circle,
+  logo,
   profile,
 };

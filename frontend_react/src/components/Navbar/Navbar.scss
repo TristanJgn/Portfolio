@@ -4,7 +4,8 @@
 .navbar {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
@@ -13,15 +14,26 @@
     position: fixed;
     z-index: 2;
 
-    @include tablet {
-        justify-content: center;
+    &__logo-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 3.125rem;
+
+        @include largeScreen {
+            width: 6.25rem;
+        }
     }
 
     &__list {
         display: none;
 
         @include tablet {
-            display: flex;
+            flex: 1;
+            @include flexCenter;
             list-style: none;
         }
     }
