@@ -18,6 +18,12 @@
     }
 }
 
+@mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
 @mixin largeScreen {
     @media (min-width: $large-screen-breakpoint) {
         @content;
