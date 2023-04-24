@@ -30,6 +30,12 @@
     }
 }
 
+@mixin largeScreenMax {
+    @media (max-width: $large-screen-breakpoint) {
+        @content;
+    }
+}
+
 @mixin textStyle ($colour, $font-size, $line-height, $font-weight) {
     color: $colour;
     font-size: $font-size;
