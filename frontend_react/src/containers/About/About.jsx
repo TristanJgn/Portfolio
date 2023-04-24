@@ -1,36 +1,18 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { images } from "../../constants";
+import { urlFor, client } from "../../client";
 import "./About.scss";
 
-const abouts = [
-  {
-    title: "Software Engineer",
-    description:
-      "I have developed a toolkit of both front-end and back-end technologies which I am always growing",
-    imgURL: images.about01,
-  },
-  {
-    title: "Business Graduate",
-    description:
-      "My previous experience keeps me focused on driving success beyond just writing great code",
-    imgURL: images.about04,
-  },
-  {
-    title: "Determined",
-    description:
-      "I am always looking to challenge myself in new ways which is one thing I enjoy about software development",
-    imgURL: images.about02,
-  },
-  {
-    title: "Leader",
-    description:
-      "My approach to working in teams is to adapt to the needs of the group whether it be taking a leadership role or finding ways to bring out the best in others",
-    imgURL: images.about03,
-  },
-];
-
 function About() {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]'; // Query all items in the abouts schema
+
+    client.fetch(query)
+    .then((data) => setAbouts(data))
+  }, [])
+
   return (
     <>
       <h2 className="about__title">I know that <span className="about__title--highlight">Good Apps</span><br />means <span className="about__title--highlight">Good Business</span></h2>
@@ -43,7 +25,7 @@ function About() {
             className="about__profile-item"
             key={about.title + index}
           >
-            <img src={about.imgURL} alt={about.title} className="about__profile-image"/>
+            <img src={urlFor(about.imgURL)} alt={about.title} className="about__profile-image"/>
             <h2 className="about__profile-header">{about.title}</h2>
             <p className="about__profile-text">{about.description}</p>
           </motion.div>
