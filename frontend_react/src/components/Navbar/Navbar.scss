@@ -69,6 +69,10 @@
         &:hover {
             color: $secondary-colour;
         }
+
+        @include largeScreen {
+            font-size: 1.75rem;
+        }
     }
 }
 
