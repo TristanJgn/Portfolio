@@ -1,0 +1,15 @@
+@use "../../styles/partials/mixins" as *;
+
+.app-wrap-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.app-wrap-wrapper {
+    width: 100%;
+    flex: 1;
+    @include flexCenter;
+    flex-direction: column;
+}
