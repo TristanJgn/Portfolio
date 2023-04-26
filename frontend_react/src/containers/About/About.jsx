@@ -25,7 +25,7 @@ function About() {
             className="about__profile-item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgURL)} alt={about.title} className="about__profile-image"/>
+            <img src={urlFor(about.imgUrl)} alt={about.title} className="about__profile-image"/>
             <h2 className="about__profile-header">{about.title}</h2>
             <p className="about__profile-text">{about.description}</p>
           </motion.div>
