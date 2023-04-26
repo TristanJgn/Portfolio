@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { images } from "../../constants";
+import { AppWrap } from "../../wrapper";
 import "./Header.scss";
 
 const scaleVariants = {
@@ -8,14 +9,14 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: "easeInOut"
-    }
+      ease: "easeInOut",
+    },
   },
 };
 
 function Header() {
   return (
-    <div id="home" className="header">
+    <div className="header">
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -72,4 +73,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default AppWrap(Header, "home");
