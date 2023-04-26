@@ -1,13 +1,13 @@
-import { SanityClient } from "@sanity/client";
+import { createClient } from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
-// Connect react app to the sanity project
-export const client = new SanityClient({
-  projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
-  dataset: "production",
-  apiVersion: "2023-04-24",
-  useCdn: true,
-  token: process.env.REACT_APP_SANITY_TOKEN,
+// Connect react app to the sanity client
+export const client = createClient({
+    projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
+    dataset: "production",
+    apiVersion: "2023-04-24",
+    useCdn: true,
+    token: process.env.REACT_APP_SANITY_TOKEN,
 });
 
 const builder = imageUrlBuilder(client);
