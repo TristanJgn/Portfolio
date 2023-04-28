@@ -128,8 +128,8 @@ export const schemaTypes = [
     ],
   },
   {
-    name: 'works',
-    title: 'Works',
+    name: 'projects',
+    title: 'Projects',
     type: 'document',
     fields: [
       {
@@ -154,6 +154,11 @@ export const schemaTypes = [
         type: 'string',
       },
       {
+        name: 'demoLink',
+        title: 'Demo Link',
+        type: 'string',
+      },
+      {
         name: 'imgUrl',
         title: 'ImageUrl',
         type: 'image',
@@ -161,7 +166,6 @@ export const schemaTypes = [
           hotspot: true,
         },
       },
-   
       {
         name: 'tags',
         title: 'Tags',
@@ -174,7 +178,6 @@ export const schemaTypes = [
          }
        ]
       },
-     
     ],
   },
 ]
