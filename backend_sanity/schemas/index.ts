@@ -15,12 +15,24 @@ export const schemaTypes = [
         type: 'string',
       },
       {
+        name: 'order',
+        title: 'Order',
+        type: 'number',
+      },
+      {
         name: 'imgUrl',
         title: 'ImgUrl',
         type: 'image',
         options: {
           hotspot: true,
         },
+      },
+    ],
+    orderings: [
+      {
+        title: 'Display Order',
+        name: 'displayOrder',
+        by: [{field: 'order', direction: 'asc'}],
       },
     ],
   },
@@ -82,6 +94,18 @@ export const schemaTypes = [
         type: 'array',
         of: [{type: 'workExperience'}],
       },
+      {
+        name: 'order',
+        title: 'Order',
+        type: 'number',
+      },
+    ],
+    orderings: [
+      {
+        title: 'Display Order',
+        name: 'displayOrder',
+        by: [{field: 'order', direction: 'asc'}],
+      },
     ],
   },
   {
@@ -100,12 +124,24 @@ export const schemaTypes = [
         type: 'string',
       },
       {
+        name: 'rank',
+        title: 'Rank',
+        type: 'number',
+      },
+      {
         name: 'icon',
         title: 'Icon',
         type: 'image',
         options: {
           hotspot: true,
         },
+      },
+    ],
+    orderings: [
+      {
+        title: 'Strongest Skills',
+        name: 'rankedSkills',
+        by: [{field: 'rank', direction: 'asc'}],
       },
     ],
   },
@@ -137,7 +173,7 @@ export const schemaTypes = [
         title: 'Title',
         type: 'string',
       },
-    
+
       {
         name: 'description',
         title: 'Description',
@@ -159,6 +195,11 @@ export const schemaTypes = [
         type: 'string',
       },
       {
+        name: 'order',
+        title: 'Order',
+        type: 'number',
+      },
+      {
         name: 'imgUrl',
         title: 'ImageUrl',
         type: 'image',
@@ -169,14 +210,21 @@ export const schemaTypes = [
       {
         name: 'tags',
         title: 'Tags',
-       type:'array',
-       of: [
-         {
-           name:'tag',
-           title:'Tag',
-           type:'string'
-         }
-       ]
+        type: 'array',
+        of: [
+          {
+            name: 'tag',
+            title: 'Tag',
+            type: 'string',
+          },
+        ],
+      },
+    ],
+    orderings: [
+      {
+        title: 'Display Order',
+        name: 'displayOrder',
+        by: [{field: 'order', direction: 'asc'}],
       },
     ],
   },
