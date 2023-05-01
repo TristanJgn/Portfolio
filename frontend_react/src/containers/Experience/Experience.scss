@@ -19,9 +19,7 @@
             font-size: 4rem;
         }
     }
-}
 
-.experience-skill {
     &__container {
         width: 80%;
         margin-top: 3rem;
@@ -34,6 +32,107 @@
         }
     }
 
+    &__list {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include tabletMax {
+            margin-top: 2rem;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 1rem 0rem;
+    }
+
+    &__works-list {
+        flex: 1;
+    }
+
+    &__works-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    &__year-container {
+        width: 11rem;
+        margin-right: 3rem;
+
+        @include firstMobile {
+            margin-right: 1rem;
+        }
+    }
+
+    &__year {
+        @include textStyle($secondary-colour, 1rem, 1.5, 800);
+        text-align: left;
+        margin-top: 1rem;
+
+        @include largeScreen {
+            font-size: 2rem;
+        }
+
+        @include firstMobile {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__works-name {
+        @include textStyle($black-colour, 1rem, 1.5, 800);
+        text-align: left;
+        margin-top: 1rem;
+
+        @include largeScreen {
+            font-size: 2rem;
+        }
+
+        @include firstMobile {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__works-company {
+        margin-top: 0.3125rem;
+        @include textStyle($gray-colour, 0.8rem, 1.5, 500);
+        text-align: left;
+
+        @include largeScreen {
+            font-size: 1.75rem;
+        }
+    }
+
+    &__tooltip {
+        max-width: 18.75rem !important;
+        background-color: $white-colour !important;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+        border-radius: 5px !important;
+        padding: 1rem !important;
+        color: $gray-colour !important;
+        text-align: center !important;
+        line-height: 1.5 !important;
+        opacity: 1 !important;
+
+        @include largeScreen {
+            max-width: 31.25rem !important;
+            font-size: 1.75rem !important;
+            line-height: 2 !important;
+        }
+    }
+}
+
+.experience-skill {
     &__list {
         flex: 1;
         display: flex;
