@@ -60,3 +60,9 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin appSection() {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
