@@ -49,7 +49,7 @@ function Footer() {
               tristan.jgn@gmail.com
             </a>
           </div>
-          <div className="footer__card footer__card--last">
+          <div className="footer__card">
             <img
               src={images.linkedin}
               alt="linkedin"
