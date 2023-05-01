@@ -1,10 +1,15 @@
 @use "./styles/partials/global" as *;
 @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
 
 .app {
   background-color: $primary-colour;
 
   &__whitebg {
     background-color: $white-colour;
+  }
+
+  &__about, &__experience, &__projects, &__footer {
+    @include appSection;
   }
 }
