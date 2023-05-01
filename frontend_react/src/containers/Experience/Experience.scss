@@ -1,0 +1,101 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.experience {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+
+    &__title {
+        @include textStyle($black-colour, 2.75rem, 1.5, 800);
+        text-align: center;
+        text-transform: capitalize;
+
+        @include firstMobile {
+            font-size: 2rem;
+        }
+
+        @include largeScreen {
+            font-size: 4rem;
+        }
+    }
+}
+
+.experience-skill {
+    &__container {
+        width: 80%;
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: row;
+
+        @include tabletMax {
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 5rem;
+
+        @include tabletMax {
+            margin-right: 0rem;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    &__item {
+        @include flexCenter;
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        @include largeScreen {
+            margin: 1rem 2rem;
+        }
+    }
+
+    &__item-container {
+        @include flexCenter;
+        width: 5.625rem;
+        height: 5.625rem;
+        border-radius: 50%;
+        background-color: $white-colour;
+
+        @include largeScreen {
+            width: 9.375rem;
+            height: 9.375rem;
+        }
+
+        @include secondMobile {
+            width: 4.375rem;
+            height: 4.375rem;
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px #fef4f5;
+        }
+    }
+
+    &__icon {
+        width: 50%;
+        height: 50%;
+    }
+
+    &__name {
+        margin-top: 0.5rem;
+        @include textStyle($gray-colour, 0.8rem, 1.5, 500);
+        text-align: left;
+
+        @include largeScreen {
+            margin-top: 1rem;
+            font-size: 1.75rem;
+        }
+    }
+}
