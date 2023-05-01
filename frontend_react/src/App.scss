@@ -3,4 +3,8 @@
 
 .app {
   background-color: $primary-colour;
+
+  &__whitebg {
+    background-color: $white-colour;
+  }
 }
