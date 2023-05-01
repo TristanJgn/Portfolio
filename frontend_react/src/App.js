@@ -1,4 +1,4 @@
-import { About, Experience, Header, Projects } from './containers';
+import { Header, About, Experience, Projects, Footer } from './containers';
 import { Navbar } from './components';
 import "react-tooltip/dist/react-tooltip.css";
 import './App.scss';
@@ -11,7 +11,7 @@ function App() {
       <About />
       <Experience />
       <Projects />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
