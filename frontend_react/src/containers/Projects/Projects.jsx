@@ -8,10 +8,22 @@ import "./Projects.scss";
 function Projects() {
     const [projects, setProjects] = useState([]);
 
+    function arraySort(array, key) {
+        return array.sort(function (a, b) {
+        let firstKey = a[key];
+        let secondKey = b[key];
+        return firstKey < secondKey ? -1 : firstKey > secondKey ? 1 : 0;
+        });
+    }
+
     useEffect(() => {
       const query = '*[_type == "projects"]'; // Query all items in the projects schema
 
-      client.fetch(query).then((data) => setProjects(data));
+      client.fetch(query)
+      .then((data) => {
+        const orderedProjects = arraySort(data, "order");
+        setProjects(orderedProjects);
+      });
       // eslint-disable-next-line
     }, []);
 

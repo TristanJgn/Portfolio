@@ -6,12 +6,22 @@ import "./About.scss";
 
 function About() {
   const [abouts, setAbouts] = useState([]);
+  function arraySort(array, key) {
+    return array.sort(function (a, b) {
+    let firstKey = a[key];
+    let secondKey = b[key];
+    return firstKey < secondKey ? -1 : firstKey > secondKey ? 1 : 0;
+    });
+  }
 
   useEffect(() => {
     const query = '*[_type == "abouts"]'; // Query all items in the abouts schema
 
     client.fetch(query)
-    .then((data) => setAbouts(data))
+    .then((data) => {
+        const orderedAbouts = arraySort(data, "order");
+        setAbouts(orderedAbouts);
+    });
   }, [])
 
   return (
