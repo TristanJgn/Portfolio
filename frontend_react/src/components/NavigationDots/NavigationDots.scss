@@ -7,6 +7,10 @@
     padding: 1rem;
     overflow: hidden;
 
+    @include firstMobile {
+        padding-right: 0;
+    }
+
     &__dot {
         width: 0.625rem;
         height: 0.625rem;
