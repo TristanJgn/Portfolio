@@ -13,7 +13,7 @@ function Navbar() {
         <img src={images.logo} alt="logo" className="navbar__logo" />
       </div>
       <ul className="navbar__list">
-        {["home", "about", "skills", "projects", "contact"].map((item) => (
+        {["home", "about", "experience", "projects", "contact"].map((item) => (
           <li key={`link-${item}`} className="navbar__item">
             <div className="navbar__dot" />
             <a className="navbar__link" href={`#${item}`}>

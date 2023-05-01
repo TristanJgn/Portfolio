@@ -3,7 +3,7 @@ import "./NavigationDots.scss";
 function NavigationDots({ active }) {
   return (
     <div className="navigation-sidebar">
-      {["home", "about", "skills", "projects", "contact"].map((item, index) => (
+      {["home", "about", "experience", "projects", "contact"].map((item, index) => (
         // eslint-disable-next-line
         <a
           className={`navigation-sidebar__dot ${
