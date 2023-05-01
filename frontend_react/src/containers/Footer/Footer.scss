@@ -1,0 +1,131 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+    &__title {
+        @include textStyle($black-colour, 2.75rem, 1.5, 800);
+        text-align: center;
+        text-transform: capitalize;
+
+        @include firstMobile {
+            font-size: 2rem;
+        }
+
+        @include largeScreen {
+            font-size: 4rem;
+        }
+    }
+
+    &__text {
+        @include textStyle($gray-colour, 0.8rem, 1.5, 500);
+        text-align: left;
+
+        @include largeScreen {
+            font-size: 1.75rem;
+        }
+    }
+
+    &__cards {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 4rem 1rem 1rem;
+
+        @include tabletMax {
+            width: 100%;
+        }
+
+        @include firstMobile {
+            margin: 4rem 0rem;
+        }
+    }
+
+    &__card {
+        min-width: 18.125rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: $white-colour;
+        transition: all 0.3s ease-in-out;
+
+        &--last {
+            background-color: $lightGray-colour;
+        }
+
+        &:hover {
+            box-shadow: 0 0 25px #fef4f5;
+        }
+    }
+
+    &__image {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0 0.7rem;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__form {
+        @include flexCenter;
+        width: 60%;
+        flex-direction: column;
+        margin: 1rem 2rem;
+
+        @include tabletMax {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        @include firstMobile {
+            width: 80%;
+        }
+    }
+
+    &__input-container {
+        @include flexCenter;
+        width: 100%;
+        margin: 0.75rem 0;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: $white-colour;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            box-shadow: 0 0 25px $white-colour;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.95rem;
+        border: none;
+        outline: none;
+        border-radius: 7px;
+        background-color: $white-colour;
+    }
+
+    &__textarea {
+        height: 10.625rem;
+        resize: none;
+    }
+
+    &__button {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        background-color: $secondary-colour;
+        color: $white-colour;
+        cursor: pointer;
+    }
+}
