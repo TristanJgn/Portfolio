@@ -18,6 +18,12 @@
     }
 }
 
+@mixin tabletMax {
+    @media (max-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media (min-width: $desktop-breakpoint) {
         @content;
