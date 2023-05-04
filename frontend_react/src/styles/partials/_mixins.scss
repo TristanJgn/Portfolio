@@ -19,7 +19,7 @@
 }
 
 @mixin tabletMax {
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: $tablet-max-breakpoint) {
         @content;
     }
 }
