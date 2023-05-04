@@ -13,10 +13,10 @@ import sass from "../assets/icons/sass.png";
 import SQL from "../assets/icons/SQL.png";
 
 
-import about01 from '../assets/images/about01.png';
-import about02 from "../assets/images/about02.png";
-import about03 from "../assets/images/about03.png";
-import about04 from "../assets/images/about04.png";
+import SEAbout from '../assets/images/SE_about.png';
+import businessAbout from "../assets/images/business_about.png";
+import determinedAbout from "../assets/images/determined_about.png";
+import leaderAbout from "../assets/images/leader_about.png";
 
 import circle from '../assets/images/circle.svg';
 import logo from "../assets/images/logo.svg";
@@ -37,10 +37,10 @@ export default {
   react,
   sass,
   SQL,
-  about01,
-  about02,
-  about03,
-  about04,
+  SEAbout,
+  businessAbout,
+  determinedAbout,
+  leaderAbout,
   circle,
   logo,
   profile,
