@@ -20,6 +20,25 @@
         }
     }
 
+    &__paragraph {
+        margin-top: 1rem;
+        width: 60%;
+        @include textStyle($gray-colour, 0.8rem, 1.5, 500);
+        text-align: left;
+
+        @include secondMobile {
+            width: 90%;
+        }
+
+        @include tabletMax {
+            width: 75%;
+        }
+
+        @include largeScreen {
+            font-size: 1.75rem;
+        }
+    }
+
     &__profiles {
         display: flex;
         justify-content: center;
