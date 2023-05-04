@@ -11,6 +11,10 @@
             font-size: 2rem;
         }
 
+        @include tabletMax {
+            margin-top: 2rem;
+        }
+
         @include largeScreen {
             font-size: 4rem;
         }
@@ -165,7 +169,7 @@
         }
 
         @include tabletMax {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
         }
     }
 }
