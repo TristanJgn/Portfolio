@@ -58,38 +58,50 @@ function Experience() {
               </motion.div>
             ))}
           </motion.div>
-          <motion.div className="experience__list">
-            {experiences?.map((experience) => (
-              <motion.div className="experience__item" key={experiences.year}>
-                <div className="experience__year-container">
-                  <p className="experience__year">{experience.year}</p>
-                </div>
-                <motion.div className="experience__works-list">
-                  {experience.works.map((work) => (
-                    <>
-                      <motion.div
-                        whileInView={{ opacity: [0, 1] }}
-                        transition={{ duration: 0.5 }}
-                        className="experience__works-item"
-                        data-tool
-                        data-tooltip-id={work.name}
-                        key={work.name}
-                      >
-                        <h4 className="experience__works-name">{work.name}</h4>
-                        <p className="experience__works-company">{work.company}</p>
-                      </motion.div>
-                      <Tooltip
-                        id={work.name}
-                        className="experience__tooltip"
-                        content={work.desc}
-                      >
-                      </Tooltip>
-                    </>
-                  ))}
+          <div className="experience__right-container">
+            <motion.div className="experience__list">
+              {experiences?.map((experience) => (
+                <motion.div className="experience__item" key={experiences.year}>
+                  <div className="experience__year-container">
+                    <p className="experience__year">{experience.year}</p>
+                  </div>
+                  <motion.div className="experience__works-list">
+                    {experience.works.map((work) => (
+                      <>
+                        <motion.div
+                          whileInView={{ opacity: [0, 1] }}
+                          transition={{ duration: 0.5 }}
+                          className="experience__works-item"
+                          data-tool
+                          data-tooltip-id={work.name}
+                          key={work.name}
+                        >
+                          <h4 className="experience__works-name">
+                            {work.name}
+                          </h4>
+                          <p className="experience__works-company">
+                            {work.company}
+                          </p>
+                        </motion.div>
+                        <Tooltip
+                          id={work.name}
+                          className="experience__tooltip"
+                          content={work.desc}
+                        ></Tooltip>
+                      </>
+                    ))}
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
-          </motion.div>
+              ))}
+            </motion.div>
+            <a
+              href="Tristan_Jagan_Resume.pdf"
+              download="Tristan Jagan Resume.pdf"
+              className="experience__button-link"
+            >
+              <button className="experience__button">Resume</button>
+            </a>
+          </div>
         </div>
       </>
     );

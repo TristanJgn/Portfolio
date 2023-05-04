@@ -126,6 +126,31 @@
             line-height: 2 !important;
         }
     }
+
+    &__button-link {
+        text-decoration: none;
+    }
+
+    &__button {
+        @include flexCenter;
+        height: 3.125rem;
+        width: 12.5rem;
+        @include textStyle($white-colour, 1.25rem, 0, 800);
+        text-align: center;
+        text-transform: uppercase;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to right, #26a0da 0%, $secondary-colour  51%, #26a0da 100%);
+        padding: 1rem 3rem;
+        transition: 0.5s;
+        background-size: 200% auto;       
+        box-shadow: 0 0 20px $lightGray-colour;
+        border-radius: 10px;
+
+        &:hover {
+            background-position: right center;
+        }
+    }
 }
 
 .experience-skill {
