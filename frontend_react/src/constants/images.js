@@ -10,6 +10,7 @@ import MySQL from "../assets/icons/MySQL.png";
 import node from "../assets/icons/node.png";
 import react from "../assets/icons/react.png";
 import sass from "../assets/icons/sass.png";
+import sanity from "../assets/icons/sanity.png"
 import SQL from "../assets/icons/SQL.png";
 
 
@@ -36,6 +37,7 @@ export default {
   node,
   react,
   sass,
+  sanity,
   SQL,
   SEAbout,
   businessAbout,
