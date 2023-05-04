@@ -22,7 +22,7 @@
         display: flex;
         flex-direction: row;
 
-        @include tabletMax {
+        @include desktopMax {
             width: 100%;
             flex-direction: column;
         }
@@ -66,8 +66,20 @@
         width: 11rem;
         margin-right: 3rem;
 
+        @media only screen and (max-width: 1320px) {
+            width: 6rem;
+        }
+
+        @include desktopMax {
+            width: 11rem;
+        }
+
+        @include tabletMax {
+            width: 6rem;
+        }
+
         @include firstMobile {
-            margin-right: 1rem;
+            width: 5rem;
         }
     }
 
@@ -146,9 +158,14 @@
         background-size: 200% auto;       
         box-shadow: 0 0 20px $lightGray-colour;
         border-radius: 10px;
+        cursor: pointer;
 
         &:hover {
             background-position: right center;
+        }
+
+        @include tabletMax {
+            margin-bottom: 1rem;
         }
     }
 }
@@ -162,7 +179,7 @@
         align-items: flex-start;
         margin-right: 5rem;
 
-        @include tabletMax {
+        @include desktopMax {
             margin-right: 0rem;
             justify-content: center;
             align-items: center;
