@@ -40,7 +40,7 @@ function Navbar() {
               onClick={() => setToggle(false)}
             />
             <ul className="navbar-menu__list">
-              {["home", "about", "skills", "projects", "contact"].map(
+              {["home", "about", "experience", "projects", "contact"].map(
                 (item) => (
                   <li key={item} className="navbar-menu__item">
                     <a
