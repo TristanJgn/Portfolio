@@ -32,9 +32,8 @@
         margin-top: 1rem;
         padding: 1rem;
         border-radius: 0.5rem;
-        background-color: $white-colour;
+        background-color: $primary-colour;
         color: #000;
-        cursor: pointer;
         transition: all 0.3s ease;
 
         @include largeScreen {
@@ -106,6 +105,7 @@
 
     &__link {
         @include flexCenter;
+        color: #000;
     }
 
     &__content {
@@ -137,6 +137,42 @@
             @include largeScreen {
                 font-size: 1.75rem;
             }
+        }
+    }
+
+    &__item-right-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__link-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &--last {
+            margin: 0;
+        }
+    }
+
+    &__link-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    &__link-title {
+        @include textStyle($black-colour, 1rem, 1.5, 800);
+        cursor: pointer;
+
+        @include largeScreen {
+            font-size: 2rem;
+        }
+
+        @include firstMobile {
+            font-size: 0.9rem;
         }
     }
 }

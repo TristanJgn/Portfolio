@@ -39,73 +39,110 @@ function Projects() {
         >
           {projects.map((project, index) => (
             <div className="projects__item" key={index}>
-              <div className="projects__image-container">
-                <img
-                  src={urlFor(project.imgUrl)}
-                  alt={project.name}
-                  className="projects__image"
-                />
-                <motion.div
-                  whileHover={{ opacity: [0, 1] }}
-                  transition={{
-                    duration: 0.25,
-                    ease: "easeInOut",
-                    staggerChildren: 0.5,
-                  }}
-                  className="projects__icons-container projects__hover"
-                >
+              <div className="projects__item-left-container">
+                <div className="projects__image-container">
+                  <img
+                    src={urlFor(project.imgUrl)}
+                    alt={project.name}
+                    className="projects__image"
+                  />
+                  <motion.div
+                    whileHover={{ opacity: [0, 1] }}
+                    transition={{
+                      duration: 0.25,
+                      ease: "easeInOut",
+                      staggerChildren: 0.5,
+                    }}
+                    className="projects__icons-container projects__hover"
+                  >
+                    <a
+                      href={project.projectLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="projects__link"
+                    >
+                      <motion.div
+                        whileInView={{ scale: [0, 1] }}
+                        whileHover={{ scale: [1, 0.9] }}
+                        transition={{ duration: 0.25 }}
+                        className="projects__icon-container"
+                      >
+                        <AiFillEye className="projects__icon" />
+                      </motion.div>
+                    </a>
+                    <a
+                      href={project.codeLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="projects__link"
+                    >
+                      <motion.div
+                        whileInView={{ scale: [0, 1] }}
+                        whileHover={{ scale: [1, 0.9] }}
+                        transition={{ duration: 0.25 }}
+                        className="projects__icon-container"
+                      >
+                        <AiFillGithub className="projects__icon" />
+                      </motion.div>
+                    </a>
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="projects__link"
+                    >
+                      <motion.div
+                        whileInView={{ scale: [0, 1] }}
+                        whileHover={{ scale: [1, 0.9] }}
+                        transition={{ duration: 0.25 }}
+                        className="projects__icon-container"
+                      >
+                        <AiOutlineVideoCamera className="projects__icon" />
+                      </motion.div>
+                    </a>
+                  </motion.div>
+                </div>
+                <div className="projects__content">
+                  <h4 className="projects__content__title">{project.title}</h4>
+                  <p className="projects__content__description">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+              <div className="projects__item-right-container">
+                <div className="projects__link-container">
                   <a
                     href={project.projectLink}
                     target="_blank"
                     rel="noreferrer"
                     className="projects__link"
                   >
-                    <motion.div
-                      whileInView={{ scale: [0, 1] }}
-                      whileHover={{ scale: [1, 0.9] }}
-                      transition={{ duration: 0.25 }}
-                      className="projects__icon-container"
-                    >
-                      <AiFillEye className="projects__icon" />
-                    </motion.div>
+                    <AiFillEye className="projects__link-icon" />
                   </a>
+                  <h3 className="projects__link-title">Live Site</h3>
+                </div>
+                <div className="projects__link-container">
                   <a
                     href={project.codeLink}
                     target="_blank"
                     rel="noreferrer"
                     className="projects__link"
                   >
-                    <motion.div
-                      whileInView={{ scale: [0, 1] }}
-                      whileHover={{ scale: [1, 0.9] }}
-                      transition={{ duration: 0.25 }}
-                      className="projects__icon-container"
-                    >
-                      <AiFillGithub className="projects__icon" />
-                    </motion.div>
+                    <AiFillGithub className="projects__link-icon" />
                   </a>
+                  <h3 className="projects__link-title">Source Code</h3>
+                </div>
+                <div className="projects__link-container projects__link-container--last">
                   <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noreferrer"
                     className="projects__link"
                   >
-                    <motion.div
-                      whileInView={{ scale: [0, 1] }}
-                      whileHover={{ scale: [1, 0.9] }}
-                      transition={{ duration: 0.25 }}
-                      className="projects__icon-container"
-                    >
-                      <AiOutlineVideoCamera className="projects__icon" />
-                    </motion.div>
+                    <AiOutlineVideoCamera className="projects__link-icon" />
                   </a>
-                </motion.div>
-              </div>
-              <div className="projects__content">
-                <h4 className="projects__content__title">{project.title}</h4>
-                <p className="projects__content__description">
-                  {project.description}
-                </p>
+                  <h3 className="projects__link-title">Watch Demo</h3>
+                </div>
               </div>
             </div>
           ))}
