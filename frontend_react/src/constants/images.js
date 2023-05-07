@@ -17,7 +17,7 @@ import SQL from "../assets/icons/SQL.png";
 import SEAbout from '../assets/images/SE_about.png';
 import businessAbout from "../assets/images/business_about.png";
 import determinedAbout from "../assets/images/determined_about.png";
-import leaderAbout from "../assets/images/leader_about.png";
+import leaderAbout from "../assets/images/leader_about.jpg";
 
 import circle from '../assets/images/circle.svg';
 import logo from "../assets/images/logo.svg";
