@@ -92,6 +92,10 @@
         text-align: left;
         margin-top: 1rem;
 
+        @include tablet {
+            font-size: 1.125rem;
+        }
+
         @include largeScreen {
             font-size: 2rem;
         }
@@ -106,6 +110,10 @@
         text-align: left;
         margin-top: 1rem;
 
+        @include tablet {
+            font-size: 1.125rem;
+        }
+
         @include largeScreen {
             font-size: 2rem;
         }
@@ -119,6 +127,10 @@
         margin-top: 0.3125rem;
         @include textStyle($gray-colour, 0.8rem, 1.5, 500);
         text-align: left;
+
+        @include tablet {
+            font-size: 1rem;
+        }
 
         @include largeScreen {
             font-size: 1.75rem;
@@ -233,6 +245,10 @@
         margin-top: 0.5rem;
         @include textStyle($gray-colour, 0.8rem, 1.5, 500);
         text-align: left;
+
+        @include tablet {
+            font-size: 1rem;
+        }
 
         @include largeScreen {
             margin-top: 1rem;

@@ -120,6 +120,10 @@
             text-align: left;
             margin-top: 1rem;
 
+            @include tablet {
+                font-size: 1.125rem;
+            }
+
             @include largeScreen {
                 font-size: 2rem;
             }
@@ -133,6 +137,10 @@
             margin-top: 0.625rem;
             @include textStyle($gray-colour, 0.8rem, 1.5, 500);
             text-align: left;
+
+            @include tablet {
+                font-size: 1rem;
+            }
 
             @include largeScreen {
                 font-size: 1.75rem;
@@ -167,6 +175,10 @@
         @include textStyle($black-colour, 1rem, 1.5, 800);
         cursor: pointer;
 
+        @include tablet {
+            font-size: 1.125rem;
+        }
+        
         @include largeScreen {
             font-size: 2rem;
         }
