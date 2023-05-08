@@ -99,7 +99,7 @@ function Experience() {
               download="Tristan Jagan Resume.pdf"
               className="experience__button-link"
             >
-              <button className="experience__button">Resume</button>
+              <button className="experience__button">Résumé</button>
             </a>
           </div>
         </div>
