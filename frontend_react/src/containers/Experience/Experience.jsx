@@ -61,13 +61,13 @@ function Experience() {
           <div className="experience__right-container">
             <motion.div className="experience__list">
               {experiences?.map((experience) => (
-                <motion.div className="experience__item" key={experiences.year}>
+                <motion.div className="experience__item" key={experience.year}>
                   <div className="experience__year-container">
                     <p className="experience__year">{experience.year}</p>
                   </div>
                   <motion.div className="experience__works-list">
                     {experience.works.map((work) => (
-                      <>
+                      <div className="experience__works-container" key={`${work.name}-container"`}>
                         <motion.div
                           whileInView={{ opacity: [0, 1] }}
                           transition={{ duration: 0.5 }}
@@ -88,7 +88,7 @@ function Experience() {
                           className="experience__tooltip"
                           content={work.desc}
                         ></Tooltip>
-                      </>
+                      </div>
                     ))}
                   </motion.div>
                 </motion.div>
