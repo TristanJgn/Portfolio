@@ -118,8 +118,8 @@ function Projects() {
                     className="projects__link"
                   >
                     <AiFillEye className="projects__link-icon" />
+                    <h3 className="projects__link-title">Live Site</h3>
                   </a>
-                  <h3 className="projects__link-title">Live Site</h3>
                 </div>
                 <div className="projects__link-container">
                   <a
@@ -129,8 +129,8 @@ function Projects() {
                     className="projects__link"
                   >
                     <AiFillGithub className="projects__link-icon" />
+                    <h3 className="projects__link-title">Source Code</h3>
                   </a>
-                  <h3 className="projects__link-title">Source Code</h3>
                 </div>
                 <div className="projects__link-container projects__link-container--last">
                   <a
@@ -140,8 +140,8 @@ function Projects() {
                     className="projects__link"
                   >
                     <AiOutlineVideoCamera className="projects__link-icon" />
+                    <h3 className="projects__link-title">Watch Demo</h3>
                   </a>
-                  <h3 className="projects__link-title">Watch Demo</h3>
                 </div>
               </div>
             </div>

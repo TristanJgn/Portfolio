@@ -49,28 +49,28 @@ function Footer() {
       <>
         <h2 className="experience__title">Contact</h2>
         <div className="footer__cards">
-          <div className="footer__card">
-            <img src={images.email} alt="email" className="footer__image" />
-            <a
-              href="mailto:tristan.jgn@gmail.com"
-              className="footer__text footer__link"
-            >
-              tristan.jgn@gmail.com
-            </a>
-          </div>
-          <div className="footer__card">
-            <img
-              src={images.linkedin}
-              alt="linkedin"
-              className="footer__image"
-            />
-            <a
-              href="https://www.linkedin.com/in/tristanjagan/"
-              className="footer__text footer__link"
-            >
-              LinkedIn
-            </a>
-          </div>
+          <a
+            href="mailto:tristan.jgn@gmail.com"
+            className="footer__text footer__link"
+          >
+            <div className="footer__card">
+              <img src={images.email} alt="email" className="footer__image" />
+              <p className="footer__text">tristan.jgn@gmail.com</p>
+            </div>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tristanjagan/"
+            className="footer__text footer__link"
+          >
+            <div className="footer__card">
+              <img
+                src={images.linkedin}
+                alt="linkedin"
+                className="footer__image"
+              />
+              <p className="footer__text">LinkedIn</p>
+            </div>
+          </a>
         </div>
 
         {!isFormSubmitted ? (

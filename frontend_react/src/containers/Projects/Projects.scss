@@ -121,6 +121,7 @@
     &__link {
         @include flexCenter;
         color: #000;
+        text-decoration: none;
     }
 
     &__content {
