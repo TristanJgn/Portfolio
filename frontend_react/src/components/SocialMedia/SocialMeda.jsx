@@ -4,24 +4,24 @@ import "./SocialMedia.scss";
 function SocialMedia() {
   return (
     <div className="social">
-      <div className="social__item">
-        <a
-          href="https://www.linkedin.com/in/tristanjagan/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <a
+        href="https://www.linkedin.com/in/tristanjagan/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="social__item">
           <BsLinkedin className="social__icon" />
-        </a>
-      </div>
-      <div className="social__item">
-        <a
-          href="https://github.com/TristanJgn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </a>
+      <a
+        href="https://github.com/TristanJgn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="social__item">
           <BsGithub className="social__icon" />
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   );
 };
