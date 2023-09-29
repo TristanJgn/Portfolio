@@ -4,9 +4,8 @@ import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./Footer.scss";
 
-const formSubmissionKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY; // Access key to send form submissions to gmail account
-
 function Footer() {
+    const formSubmissionKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY; // Access key to send form submissions to gmail account
     const [formData, setFormData] = useState({ name: "", email: "", message: ""});
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
