@@ -1,8 +1,10 @@
 import { useState } from "react";
+import axios from "axios";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { client } from "../../client";
 import "./Footer.scss";
+
+const formSubmissionKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY; // Access key to send form submissions to gmail account
 
 function Footer() {
     const [formData, setFormData] = useState({ name: "", email: "", message: ""});
@@ -18,22 +20,29 @@ function Footer() {
     }
 
     const handleSubmit = () => {
-        setLoading(true);
+      setLoading(true);
 
-        // Create object for that matches Sanity schema
-        const contact = {
-            _type: "contact",
-            name: name,
-            email: email,
-            message: message,
-        }
-
-        // Upload data to Sanity
-        client.create(contact)
-        .then(() => {
+      axios.post("https://api.web3forms.com/submit", {
+      access_key: formSubmissionKey,
+      subject: "New message from personal site",
+      email: email,
+      name: name,
+      message: message,
+      })
+      .then((response) => {
+        if (response.status === 200) {
             setLoading(false);
             setIsFormSubmitted(true);
-        })
+        } else {
+            setLoading(true);
+            setIsFormSubmitted(false);
+        }
+      })
+      .catch((error) => {
+        setLoading(true);
+        setIsFormSubmitted(false);
+        console.error(error);
+      })
     }
 
     return (
