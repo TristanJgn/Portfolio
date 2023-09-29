@@ -22,7 +22,17 @@
 
     &__portfolio {
         @include flexCenter;
-        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include smallTablet {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        @include tablet {
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -35,6 +45,10 @@
         background-color: $primary-colour;
         color: #000;
         transition: all 0.3s ease;
+
+        @include smallTablet {
+            margin-right: 5rem;
+        }
 
         @include largeScreen {
             width: 29.375rem;
@@ -63,6 +77,7 @@
         height: 100%;
         border-radius: 0.5rem;
         object-fit: cover;
+        object-position: left;
     }
 
     &__hover {

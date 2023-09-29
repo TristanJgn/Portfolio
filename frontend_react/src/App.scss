@@ -12,4 +12,12 @@
   &__about, &__experience, &__projects, &__footer {
     @include appSection;
   }
+
+  &__projects {
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
 }
