@@ -15,6 +15,7 @@ import react from "../assets/icons/react.png";
 import sass from "../assets/icons/sass.png";
 import sanity from "../assets/icons/sanity.png"
 import SQL from "../assets/icons/SQL.png";
+import TypeScript from "../assets/icons/TypeScript.png";
 
 
 import SEAbout from '../assets/images/SE_about.png';
@@ -45,6 +46,7 @@ export default {
   sass,
   sanity,
   SQL,
+  TypeScript,
   SEAbout,
   businessAbout,
   determinedAbout,
