@@ -16,6 +16,7 @@ import sass from "../assets/icons/sass.png";
 import sanity from "../assets/icons/sanity.png"
 import SQL from "../assets/icons/SQL.png";
 import TypeScript from "../assets/icons/TypeScript.png";
+import WordPress from "../assets/icons/WordPress.png";
 
 
 import SEAbout from '../assets/images/SE_about.png';
@@ -47,6 +48,7 @@ export default {
   sanity,
   SQL,
   TypeScript,
+  WordPress,
   SEAbout,
   businessAbout,
   determinedAbout,
